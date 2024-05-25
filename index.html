@@ -182,7 +182,9 @@
         var answer = document.getElementById("answer");
 
         document.getElementById("submit").onsubmit = function(ev) {
-          if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString() == "U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=") {
+          console.log(CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString());
+          console.log("U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=");
+          if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString() == ""){
             document.getElementById("title").innerText = "Puzzle Complete!";
             document.getElementById("submit").disabled = true;
           }
