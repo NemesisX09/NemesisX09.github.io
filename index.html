@@ -150,7 +150,7 @@
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
       
-          <form onsubmit="event.preventDefault();">
+          <form onsubmit="event.preventDefault(); co();"> 
             <div class="formbold-form-title">
               <h2 id="title">Puzzle</h2>
               <p>
@@ -181,7 +181,7 @@
       <script>
         var answer = document.getElementById("answer");
 
-        document.getElementById("submit").onsubmit = function(ev) {
+        function co() {
           console.log(CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString());
           console.log("U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=");
           if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString() == ""){
