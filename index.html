@@ -182,8 +182,8 @@
         var answer = document.getElementById("answer");
 
         function co() {
-          console.log(CryptoJS.AES.encrypt("9", "Secret Passphrase").toString());
-          if (CryptoJS.AES.decrypt("U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=", "Secret Passphrase").toString() == answer.value){
+          // console.log(CryptoJS.AES.encrypt("89", "Secret Passphrase").toString());
+          if (CryptoJS.AES.decrypt("U2FsdGVkX1+D/p7HHcxUIn9WbBkyjFFRMZTapz3KiZ0=", "Secret Passphrase").toString() == answer.value){
             document.getElementById("title").innerText = "Puzzle Complete!";
             alert("You finished!");
             document.getElementById("submit").disabled = true;
