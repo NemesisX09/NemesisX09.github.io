@@ -1,14 +1,162 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .formbold-mb-3 {
+        margin-bottom: 15px;
+      }
+      .formbold-relative {
+        position: relative;
+      }
+      .formbold-opacity-0 {
+        opacity: 0;
+      }
+      .formbold-stroke-current {
+        stroke: currentColor;
+      }
+      #supportCheckbox:checked ~ div span {
+        opacity: 1;
+      }
+    
+      .formbold-main-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px;
+      }
+    
+      .formbold-form-wrapper {
+        margin: 0 auto;
+        max-width: 570px;
+        width: 100%;
+        background: white;
+        padding: 40px;
+      }
+    
+      .formbold-img {
+        margin-bottom: 45px;
+      }
+    
+      .formbold-form-title {
+        margin-bottom: 30px;
+      }
+      .formbold-form-title h2 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        color: #07074d;
+      }
+      .formbold-form-title p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #536387;
+        margin-top: 12px;
+      }
+    
+      .formbold-input-flex {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 15px;
+      }
+      .formbold-input-flex > div {
+        width: 50%;
+      }
+      .formbold-form-input {
+        text-align: center;
+        width: 100%;
+        padding: 13px 22px;
+        border-radius: 5px;
+        border: 1px solid #dde3ec;
+        background: #ffffff;
+        font-weight: 500;
+        font-size: 16px;
+        color: #536387;
+        outline: none;
+        resize: none;
+      }
+      .formbold-form-input:focus {
+        border-color: #6a64f1;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+      .formbold-form-label {
+        color: #536387;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+    
+      .formbold-checkbox-label {
+        display: flex;
+        cursor: pointer;
+        user-select: none;
+        font-size: 16px;
+        line-height: 24px;
+        color: #536387;
+      }
+      .formbold-checkbox-label a {
+        margin-left: 5px;
+        color: #6a64f1;
+      }
+      .formbold-input-checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      .formbold-checkbox-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+        margin-top: 2px;
+        border: 0.7px solid #dde3ec;
+        border-radius: 3px;
+      }
+    
+      .formbold-btn {
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 14px 25px;
+        border: none;
+        font-weight: 500;
+        background-color: #6a64f1;
+        color: white;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+      .formbold-btn:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
 <body>
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
       
           <form>
             <div class="formbold-form-title">
-              <h2 class="">Puzzle</h2>
+              <h2 id="title">Puzzle</h2>
               <p>
-                Ah Yes.
+                1. A standard , fair six sided dice is rolled 4 times, resulting in the values a, b, c, and d. Suppose that the maximum and minimum possible values of a + ab - cd + d are M and N respectively. Let T be M - N.
+                2. The angles of a convex n-gon form an arithmetic progression with largest angle 27°. Let G be the maximum possible value of n.
+                3. Compute the real number z such that 2 ^ ln(G) = x ^ ln(2). Find x and submit the answer.
               </p>
             </div>
       
@@ -23,153 +171,23 @@
                   class="formbold-form-input"
                 />
               </div>
-            <button class="formbold-btn">Register Now</button>
+            <button class="formbold-btn" id="submit">Submit</button>
           </form>
         </div>
       </div>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        body {
-          font-family: 'Inter', sans-serif;
-        }
-        .formbold-mb-3 {
-          margin-bottom: 15px;
-        }
-        .formbold-relative {
-          position: relative;
-        }
-        .formbold-opacity-0 {
-          opacity: 0;
-        }
-        .formbold-stroke-current {
-          stroke: currentColor;
-        }
-        #supportCheckbox:checked ~ div span {
-          opacity: 1;
-        }
-      
-        .formbold-main-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 48px;
-        }
-      
-        .formbold-form-wrapper {
-          margin: 0 auto;
-          max-width: 570px;
-          width: 100%;
-          background: white;
-          padding: 40px;
-        }
-      
-        .formbold-img {
-          margin-bottom: 45px;
-        }
-      
-        .formbold-form-title {
-          margin-bottom: 30px;
-        }
-        .formbold-form-title h2 {
-          font-weight: 600;
-          font-size: 28px;
-          line-height: 34px;
-          color: #07074d;
-        }
-        .formbold-form-title p {
-          font-size: 16px;
-          line-height: 24px;
-          color: #536387;
-          margin-top: 12px;
-        }
-      
-        .formbold-input-flex {
-          display: flex;
-          gap: 20px;
-          margin-bottom: 15px;
-        }
-        .formbold-input-flex > div {
-          width: 50%;
-        }
-        .formbold-form-input {
-          text-align: center;
-          width: 100%;
-          padding: 13px 22px;
-          border-radius: 5px;
-          border: 1px solid #dde3ec;
-          background: #ffffff;
-          font-weight: 500;
-          font-size: 16px;
-          color: #536387;
-          outline: none;
-          resize: none;
-        }
-        .formbold-form-input:focus {
-          border-color: #6a64f1;
-          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-        }
-        .formbold-form-label {
-          color: #536387;
-          font-size: 14px;
-          line-height: 24px;
-          display: block;
-          margin-bottom: 10px;
-        }
-      
-        .formbold-checkbox-label {
-          display: flex;
-          cursor: pointer;
-          user-select: none;
-          font-size: 16px;
-          line-height: 24px;
-          color: #536387;
-        }
-        .formbold-checkbox-label a {
-          margin-left: 5px;
-          color: #6a64f1;
-        }
-        .formbold-input-checkbox {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border-width: 0;
-        }
-        .formbold-checkbox-inner {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 20px;
-          height: 20px;
-          margin-right: 16px;
-          margin-top: 2px;
-          border: 0.7px solid #dde3ec;
-          border-radius: 3px;
-        }
-      
-        .formbold-btn {
-          font-size: 16px;
-          border-radius: 5px;
-          padding: 14px 25px;
-          border: none;
-          font-weight: 500;
-          background-color: #6a64f1;
-          color: white;
-          cursor: pointer;
-          margin-top: 25px;
-        }
-        .formbold-btn:hover {
-          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-        }
-      </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+      <script>
+        var answer = document.getElementById("answer");
+        var encrypted = CryptoJS.AES.encrypt("9", "Secret Passphrase");
+        console.log(encrypted);
+
+        document.getElementById("submit").onsubmit = function(ev) {
+          if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase") == encrypted) {
+            document.getElementById("title").innerText = "Puzzle Complete!";
+            document.getElementById("submit").disabled = true;
+          }
+        };
+
+      </script>
 </body>
 </html>
