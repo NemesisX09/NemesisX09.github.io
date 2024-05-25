@@ -183,7 +183,6 @@
 
         function co() {
           console.log(CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString());
-          console.log);
           if (CryptoJS.AES.encrypt(("U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=", "Secret Passphrase").toString() == answer.value){
             document.getElementById("title").innerText = "Puzzle Complete!";
             document.getElementById("submit").disabled = true;
