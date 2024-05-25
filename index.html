@@ -155,7 +155,9 @@
               <h2 id="title">Puzzle</h2>
               <p>
                 1. A standard , fair six sided dice is rolled 4 times, resulting in the values a, b, c, and d. Suppose that the maximum and minimum possible values of a + ab - cd + d are M and N respectively. Let T be M - N.
+              </p><p>
                 2. The angles of a convex n-gon form an arithmetic progression with largest angle 27°. Let G be the maximum possible value of n.
+              </p><p>
                 3. Compute the real number z such that 2 ^ ln(G) = x ^ ln(2). Find x and submit the answer.
               </p>
             </div>
@@ -178,11 +180,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
       <script>
         var answer = document.getElementById("answer");
-        var encrypted = CryptoJS.AES.encrypt("9", "Secret Passphrase");
-        console.log(encrypted);
 
         document.getElementById("submit").onsubmit = function(ev) {
-          if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase") == encrypted) {
+          if (CryptoJS.AES.encrypt(answer.value, "Secret Passphrase").toString() == "U2FsdGVkX1+OVkenlZ3mGRJstu4r/EEhgev//Vdc0N8=") {
             document.getElementById("title").innerText = "Puzzle Complete!";
             document.getElementById("submit").disabled = true;
           }
