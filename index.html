@@ -183,7 +183,7 @@
 
         function co() {
           // console.log(CryptoJS.AES.encrypt("89", "Secret Passphrase").toString());
-          if (CryptoJS.AES.decrypt("U2FsdGVkX1+D/p7HHcxUIn9WbBkyjFFRMZTapz3KiZ0=", "Secret Passphrase").toString() == answer.value){
+          if (CryptoJS.AES.decrypt("U2FsdGVkX1+D/p7HHcxUIn9WbBkyjFFRMZTapz3KiZ0=", "Secret Passphrase").toString() == "3"+answer.value){
             document.getElementById("title").innerText = "Puzzle Complete!";
             alert("You finished!");
             document.getElementById("submit").disabled = true;
